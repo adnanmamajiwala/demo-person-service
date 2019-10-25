@@ -17,7 +17,14 @@ public class DataInitializer {
 
     @Bean
     public CommandLineRunner run(PersonRepository repository) {
-        return args -> repository.saveAll(Arrays.asList(getPeople()));
+        return args -> {
+            if (repository.count() == 0) {
+                log.debug("No records found. Now inserting from data.json");
+                repository.saveAll(Arrays.asList(getPeople()));
+            } else {
+                log.debug("Records are found.");
+            }
+        };
     }
 
     private Person[] getPeople() throws Exception {

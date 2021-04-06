@@ -1,10 +1,10 @@
-spring:
-  profiles:
-    active: prod
-  jpa:
-    database: mysql
-    hibernate:
-      ddl-auto: update
-  datasource:
-    url:  jdbc:mysql://innouser:innopass@10.44.6.160:3306/innodb
-#    url:  jdbc:mysql://innouser:innopass@127.0.0.1:3306/innodb
+#spring:
+#  profiles:
+#    active: prod
+#  jpa:
+#    database: mysql
+#    hibernate:
+#      ddl-auto: update
+#  datasource:
+#    url:  jdbc:mysql://innouser:innopass@10.44.6.160:3306/innodb
+##    url:  jdbc:mysql://innouser:innopass@127.0.0.1:3306/innodb
